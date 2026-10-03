@@ -1,6 +1,5 @@
 package io.jonathanlee.switchyard_api.domain.dtos;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
@@ -16,6 +15,5 @@ public class AudienceDto extends BaseDto {
 
   private String key;
 
-  @JsonProperty("isEnabled")
-  private boolean enabled;
+  private String query;
 }
