@@ -1,9 +1,8 @@
 package io.jonathanlee.switchyard_api.domain.dtos.request;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,8 +16,7 @@ import lombok.NoArgsConstructor;
 public class CreateFlagRequestDto implements Serializable {
 
   @NotNull
-  @Min(1)
-  @Max(50)
+  @Size(min = 1, max = 50)
   private String key;
 
   @JsonAlias("isEnabled")
