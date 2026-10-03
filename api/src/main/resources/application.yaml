@@ -6,3 +6,8 @@ mybatis:
   configuration:
     map-underscore-to-camel-case: true
   type-handlers-package: io.jonathanlee.switchyard_api.mappers.typehandlers
+
+spring.cache:
+  type: redis
+  redis:
+    time-to-live: 8h
