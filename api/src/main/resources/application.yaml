@@ -16,3 +16,12 @@ spring.cache:
   type: redis
   redis:
     time-to-live: 8h
+
+server:
+  forward-headers-strategy: native
+
+switchyard:
+  rate-limit:
+    public-flags:
+      limit: 120
+      window: 1m
