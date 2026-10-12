@@ -68,7 +68,9 @@ public class PublicFlagsRateLimitFilter extends OncePerRequestFilter {
             """
             {"type":"about:blank","title":"Too Many Requests","status":429,\
             "detail":"Rate limit of %d requests per window exceeded. Retry after %d seconds.",\
-            "instance":"%s"}"""
-                .formatted(decision.limit(), decision.retryAfterSeconds(), request.getRequestURI()));
+            "instance":"%s"}\
+            """
+                .formatted(
+                    decision.limit(), decision.retryAfterSeconds(), request.getRequestURI()));
   }
 }
